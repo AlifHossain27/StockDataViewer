@@ -45,7 +45,9 @@ app.layout=dbc.Container([
                                    "background": '#111111',
                               },
                ),
-               dcc.Graph(id='fig-1',figure={})
+               dbc.Card([dbc.CardBody(
+                dcc.Graph(id='fig-1',figure={})
+               )])
           ]),
 
           dbc.Col([
@@ -56,7 +58,9 @@ app.layout=dbc.Container([
                                    
                                    "background": '#111111',
                               },),
-               dcc.Graph(id='fig-2', figure={})
+               dbc.Card([dbc.CardBody(
+                dcc.Graph(id='fig-2', figure={})
+               )])
           ]),
 
      ]),
@@ -71,9 +75,11 @@ app.layout=dbc.Container([
                                         for x in sorted(df['Symbols'].unique())],
                               labelClassName="mr-3"
                               ),
-               dcc.Graph(id='fig-3', figure={},className='mb-5'),
+               dbc.Card([dbc.CardBody(
+                dcc.Graph(id='fig-3', figure={})
+               )])
                
-          ])
+          ],className='mb-5')
      ]),
 ])
 
