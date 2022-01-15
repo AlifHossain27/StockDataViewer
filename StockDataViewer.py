@@ -19,7 +19,7 @@ df = web.DataReader(['AMZN','GOOGL','FB','AAPL','MSFT','ADBE','ALEX','NTES','ANF
 df = df.stack().reset_index()
 
 
-# Initailizing the Dah app
+# Initailizing the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG],
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1.0'}]
